@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is already in style.css -->
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-content">
+            <h1>Contact Us</h1>
+            <p class="hero-subtitle">Get in touch with MARTOO TECH WORKS</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0973495316">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="academic">Academic Services</option>
+                                <option value="software">Software Installation</option>
+                                <option value="technical">Technical Repair</option>
+                                <option value="course">Course Enrollment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="info-card">
+                        <h3>Contact Info</h3>
+                        <a href="https://wa.me/260973495316" target="_blank" class="info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp <small>0973495316</small></span>
+                        </a>
+                        <a href="tel:+260774766077" class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Call Us <small>0774766077</small></span>
+                        </a>
+                        <a href="mailto:martootechworks@gmail.com" class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email <small>martootechworks@gmail.com</small></span>
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Follow Us</h3>
+                        <div class="social-grid">
+                            <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank" class="social-link facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                            <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank" class="social-link youtube">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                            <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank" class="social-link instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <div class="social-link twitter">
+                                <i class="fab fa-twitter"></i> Twitter (soon)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

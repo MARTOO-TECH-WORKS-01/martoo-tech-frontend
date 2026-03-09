@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is already in style.css -->
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-content">
+            <h1>Refund Policy</h1>
+            <p class="hero-subtitle">Our policy regarding refunds for courses and services</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <div class="legal-content">
+        <p class="text-sm" style="color:#94a3b8;">Last updated: March 2026</p>
+
+        <h2>Course Refunds</h2>
+        <p>If you are not satisfied with a course, you may request a refund within 7 days of purchase, provided you have completed less than 30% of the course content. Refunds will be processed to the original payment method within 5-10 business days.</p>
+
+        <h2>Service Refunds</h2>
+        <p>For services rendered (e.g., data analysis, software installation), refunds are handled on a case-by-case basis. Please contact us within 48 hours if you are unsatisfied.</p>
+
+        <h2>Software Downloads</h2>
+        <p>Software downloads are non-refundable due to the nature of digital products. However, if you encounter technical issues, we will assist in resolving them.</p>
+
+        <h2>How to Request a Refund</h2>
+        <p>Email us at <a href="mailto:martootechworks@gmail.com">martootechworks@gmail.com</a> with your order details and reason for refund. We will respond within 2 business days.</p>
+
+        <h2>Exceptions</h2>
+        <p>No refunds will be issued for violations of our Terms of Service or for services already fully rendered.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

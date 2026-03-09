@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is already in style.css -->
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Dynamic auth button will be injected here -->
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Welcome to <span class="brand">MARTOO TECH WORKS</span></h1>
+            <p class="hero-subtitle">Your Premier Platform for GIS Training, Academic Support, and Technical Services in Zambia</p>
+            <div class="hero-buttons">
+                <a href="login.html" class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Enroll Now</a>
+                <a href="courses.html" class="btn btn-outline"><i class="fas fa-book-open"></i> Browse Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Banner -->
+    <section class="payment-banner">
+        <div class="container">
+            <span class="payment-label">Accepted Payments:</span>
+            <div class="payment-icons">
+                <span class="payment-item"><i class="fab fa-cc-mastercard"></i> Mastercard</span>
+                <span class="payment-item"><i class="fas fa-mobile-alt"></i> Airtel Money</span>
+                <span class="payment-item"><i class="fas fa-mobile-alt"></i> MTN MoMo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <p class="section-subtitle">Start your learning journey with our most popular professional courses</p>
+            <div class="grid-3">
+                <!-- Course 1 -->
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>GIS Practical Training (QGIS)</h3>
+                    <p>Learn GIS mapping and analysis with QGIS – perfect for beginners.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 500</span>
+                        <span><i class="far fa-clock"></i> 4 weeks</span>
+                    </div>
+                    <a href="courses.html" class="btn-card">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Course 2 -->
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>STATA Data Analysis</h3>
+                    <p>Statistical analysis using STATA – comprehensive training.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 600</span>
+                        <span><i class="far fa-clock"></i> 5 weeks</span>
+                    </div>
+                    <a href="courses.html" class="btn-card">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Course 3 -->
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>Research Proposal Writing</h3>
+                    <p>Master the art of writing compelling research proposals.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 300</span>
+                        <span><i class="far fa-clock"></i> 2 weeks</span>
+                    </div>
+                    <a href="courses.html" class="btn-card">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="courses.html" class="btn-view-all">View All Courses <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional technical and academic services tailored to your needs</p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Data Analysis</h3>
+                    <p>STATA/SPSS analysis for research</p>
+                    <a href="services.html" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Software Installation</h3>
+                    <p>Windows, Office, and more</p>
+                    <a href="services.html" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Computer Repair</h3>
+                    <p>Hardware & software troubleshooting</p>
+                    <a href="services.html" class="btn-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="services.html" class="btn-primary btn">Explore All Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Preview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Free Tutorials</h2>
+            <p class="section-subtitle">Watch our free tutorials on YouTube and enhance your skills</p>
+            <div class="tutorial-preview">
+                <div class="tutorial-icon"><i class="fab fa-youtube"></i></div>
+                <div class="tutorial-content">
+                    <h3>Visit Our YouTube Channel</h3>
+                    <p>Subscribe for regular tutorials on GIS, data analysis, and software installation</p>
+                    <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank" class="btn btn-accent"><i class="fab fa-youtube"></i> Watch Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="tutorials.html" class="btn-link">Browse All Tutorials <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Preview -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Software Downloads</h2>
+            <p class="section-subtitle">Access professional software for your academic and professional work</p>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>STATA</h3>
+                    <p>Statistical software for data analysis</p>
+                    <a href="downloads.html" class="btn-link">Download <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>QGIS</h3>
+                    <p>Free and open-source GIS application</p>
+                    <a href="downloads.html" class="btn-link">Download <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>SPSS</h3>
+                    <p>Statistical analysis software</p>
+                    <a href="downloads.html" class="btn-link">Download <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="downloads.html" class="btn-primary btn">Go to Downloads <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support -->
+    <section class="support">
+        <div class="container">
+            <h2>Need Technical Support?</h2>
+            <p>We're here to help with any technical issues, questions, or service requests</p>
+            <div class="support-buttons">
+                <a href="contact.html" class="btn btn-secondary"><i class="fas fa-headset"></i> Contact Support</a>
+                <a href="https://wa.me/260973495316" target="_blank" class="btn btn-white"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <!-- Admin link (staff only) -->
+                        <li><a href="admin-login.html" style="color: #f59e0b;"><i class="fas fa-lock"></i> Admin (staff only)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- JavaScript for Dynamic Auth Button -->
+    <script>
+        function updateAuthButton() {
+            const authItem = document.getElementById('auth-nav-item');
+            const token = localStorage.getItem('token');
+
+            if (token) {
+                // User is logged in – show logout button
+                authItem.innerHTML = '<a href="#" id="logout-link" class="btn-login"><i class="fas fa-sign-out-alt"></i> Logout</a>';
+                document.getElementById('logout-link').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    window.location.href = 'index.html'; // redirect to home after logout
+                });
+            } else {
+                // No token – show login button
+                authItem.innerHTML = '<a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a>';
+            }
+        }
+
+        // Run on page load
+        updateAuthButton();
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome is already in style.css -->
+    <script>
+        async function downloadWithPassword(softwareName, driveLink) {
+            const password = prompt("Enter password to download " + softwareName + ":");
+            if (!password) return;
+
+            try {
+                const response = await fetch('http://localhost:5000/api/downloads/verify', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password })
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    window.open(driveLink, "_blank");
+                } else {
+                    alert("Incorrect password. Please try again.");
+                }
+            } catch (error) {
+                alert("Network error. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-content">
+            <h1>Software Downloads</h1>
+            <p class="hero-subtitle">Professional software for your academic and professional work</p>
+        </div>
+    </section>
+
+    <!-- Downloads Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+                <!-- STATA -->
+                <div class="download-card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>STATA</h3>
+                    <p><strong>Version:</strong> STATA 18</p>
+                    <p><strong>Size:</strong> 850 MB</p>
+                    <p class="note">Statistical software</p>
+                    <button onclick="downloadWithPassword('STATA', 'https://drive.google.com/file/d/1EBmJgeGp5Eh_NoYvbZOF9eGDc90OH13H/view?usp=drivesdk')" class="btn-card">Download STATA <i class="fas fa-download"></i></button>
+                </div>
+                <!-- QGIS -->
+                <div class="download-card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>QGIS</h3>
+                    <p><strong>Version:</strong> QGIS 3.34</p>
+                    <p><strong>Size:</strong> 1.2 GB</p>
+                    <p class="note">GIS application</p>
+                    <button onclick="downloadWithPassword('QGIS', 'https://drive.google.com/file/d/14sEM_GhJwWL4cHQAaJg-D1UsDi7gjjku/view?usp=drivesdk')" class="btn-card">Download QGIS <i class="fas fa-download"></i></button>
+                </div>
+                <!-- SPSS -->
+                <div class="download-card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>SPSS</h3>
+                    <p><strong>Version:</strong> SPSS 29</p>
+                    <p><strong>Size:</strong> 950 MB</p>
+                    <p class="note">Statistical analysis</p>
+                    <button onclick="downloadWithPassword('SPSS', 'https://drive.google.com/file/d/1-0T0omxeFigW_ct_xxoPxMS3-_hIc6Wl/view?usp=drivesdk')" class="btn-card">Download SPSS <i class="fas fa-download"></i></button>
+                </div>
+                <!-- Mapeta -->
+                <div class="download-card">
+                    <i class="fas fa-download card-icon" style="color:#10b981;"></i>
+                    <h3>Mapeta</h3>
+                    <p><strong>Version:</strong> Mapeta 2.5</p>
+                    <p><strong>Size:</strong> 450 MB</p>
+                    <p class="note">Free download – License installation paid</p>
+                    <button onclick="downloadWithPassword('Mapeta', '#')" class="btn-card">Download Mapeta <i class="fas fa-download"></i></button>
+                    <p style="font-size:0.85rem; color:gray; margin-top:8px;">(Link placeholder – update when available)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

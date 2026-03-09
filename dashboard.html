@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .enrolled-course {
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background-color: #f8fafc;
+        }
+        .enrolled-course h3 {
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .enrolled-course .status {
+            font-weight: 600;
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        .status-pending { background-color: #fef3c7; color: #92400e; }
+        .status-approved { background-color: #d1fae5; color: #065f46; }
+        .progress-bar {
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            height: 0.5rem;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        .progress-fill {
+            background-color: #10b981;
+            height: 0.5rem;
+            border-radius: 9999px;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-content">
+            <h1>User Dashboard</h1>
+            <p class="hero-subtitle">Manage your courses and account</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <div class="auth-container">
+        <div class="auth-box" style="max-width: 800px;">
+            <h2>Welcome, <span id="userName"></span>!</h2>
+            <div id="userInfo" style="margin-bottom:2rem;"></div>
+
+            <h3 style="margin-bottom:1rem;">My Enrolled Courses</h3>
+            <div id="enrollmentsList">
+                <p style="text-align:center; color:#64748b;">Loading your courses...</p>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:10px; margin-top:2rem;">
+                <a href="courses.html" class="btn-primary btn">Browse More Courses</a>
+                <button id="logoutBtn" class="btn-secondary btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- Dashboard JavaScript -->
+    <script>
+        // Check authentication
+        const token = localStorage.getItem('token');
+        const userStr = localStorage.getItem('user');
+
+        if (!token || !userStr) {
+            window.location.href = 'login.html';
+        }
+
+        let user = null;
+        try {
+            user = JSON.parse(userStr);
+        } catch (e) {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'login.html';
+        }
+
+        // Display user info
+        document.getElementById('userName').textContent = user.name;
+        const userInfoDiv = document.getElementById('userInfo');
+        userInfoDiv.innerHTML = `
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Phone:</strong> ${user.phone || 'Not provided'}</p>
+            <p><strong>Status:</strong> <span class="status ${user.enrollmentStatus === 'approved' ? 'status-approved' : 'status-pending'}">${user.enrollmentStatus}</span></p>
+        `;
+
+        // Fetch enrollments
+        async function fetchEnrollments() {
+            const listDiv = document.getElementById('enrollmentsList');
+            try {
+                const response = await fetch('http://localhost:5000/api/enrollments/my-enrollments', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    if (data.enrollments.length === 0) {
+                        listDiv.innerHTML = '<p style="text-align:center; color:#64748b;">You haven\'t enrolled in any courses yet.</p>';
+                    } else {
+                        let html = '';
+                        data.enrollments.forEach(enr => {
+                            const statusClass = enr.paymentStatus === 'approved' ? 'status-approved' : 'status-pending';
+                            html += `
+                                <div class="enrolled-course">
+                                    <h3>${enr.courseTitle}</h3>
+                                    <p><strong>Price:</strong> ${enr.price}</p>
+                                    <p><strong>Enrolled:</strong> ${new Date(enr.enrollmentDate).toLocaleDateString()}</p>
+                                    <p><strong>Payment:</strong> <span class="status ${statusClass}">${enr.paymentStatus}</span></p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width:${enr.progress || 0}%;"></div>
+                                    </div>
+                                    <p style="font-size:0.9rem; color:#475569;">Progress: ${enr.progress || 0}%</p>
+                                </div>
+                            `;
+                        });
+                        listDiv.innerHTML = html;
+                    }
+                } else {
+                    listDiv.innerHTML = '<p style="color:red;">Failed to load enrollments.</p>';
+                }
+            } catch (error) {
+                listDiv.innerHTML = '<p style="color:red;">Network error loading enrollments.</p>';
+            }
+        }
+
+        fetchEnrollments();
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

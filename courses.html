@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation with Hamburger -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container hero-content">
+            <h1>Our Courses</h1>
+            <p class="hero-subtitle">Professional training to boost your skills</p>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="section">
+        <div class="container">
+            <div id="enrollmentMessage" style="margin-bottom:1rem;"></div>
+            <div class="grid-3">
+                <!-- Course 1: GIS -->
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>GIS Practical Training (QGIS)</h3>
+                    <p>Learn GIS mapping and analysis with QGIS – perfect for beginners.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 500</span>
+                        <span><i class="far fa-clock"></i> 4 weeks</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 12 | Level: Beginner–Intermediate</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="gis-training"
+                            data-course-title="GIS Practical Training (QGIS)"
+                            data-price="ZMW 500">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 2: Research Proposal -->
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>Research Proposal Writing</h3>
+                    <p>Master compelling research proposals that get funded.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 300</span>
+                        <span><i class="far fa-clock"></i> 2 weeks</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 8 | Level: All Levels</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="research-proposal"
+                            data-course-title="Research Proposal Writing"
+                            data-price="ZMW 300">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 3: Assignment Formatting -->
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>Assignment Formatting Masterclass</h3>
+                    <p>APA, MLA, Harvard, Chicago – perfect assignments.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 200</span>
+                        <span><i class="far fa-clock"></i> 1 week</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 5 | Level: All Levels</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="formatting"
+                            data-course-title="Assignment Formatting Masterclass"
+                            data-price="ZMW 200">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 4: STATA -->
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>STATA Data Analysis</h3>
+                    <p>Comprehensive training in STATA software.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 600</span>
+                        <span><i class="far fa-clock"></i> 5 weeks</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 15 | Level: Intermediate</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="stata"
+                            data-course-title="STATA Data Analysis"
+                            data-price="ZMW 600">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 5: SPSS -->
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>SPSS Data Analysis</h3>
+                    <p>Master data analysis and interpretation with SPSS.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 550</span>
+                        <span><i class="far fa-clock"></i> 4 weeks</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 12 | Level: Beginner–Intermediate</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="spss"
+                            data-course-title="SPSS Data Analysis"
+                            data-price="ZMW 550">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 6: Windows Installation -->
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Windows Installation & Activation</h3>
+                    <p>Step-by-step guide for Windows OS.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 250</span>
+                        <span><i class="far fa-clock"></i> 1 week</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 4 | Level: Beginner</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="windows"
+                            data-course-title="Windows Installation & Activation"
+                            data-price="ZMW 250">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <!-- Course 7: MS Office -->
+                <div class="card">
+                    <div class="card-icon">📁</div>
+                    <h3>Microsoft Office Installation & Activation</h3>
+                    <p>Full suite installation and activation.</p>
+                    <div class="card-meta">
+                        <span class="price"><i class="fas fa-tag"></i> ZMW 250</span>
+                        <span><i class="far fa-clock"></i> 1 week</span>
+                    </div>
+                    <p class="card-detail"><i class="fas fa-cubes"></i> Modules: 4 | Level: Beginner</p>
+                    <button class="btn-card enroll-btn" 
+                            data-course-id="office"
+                            data-course-title="Microsoft Office Installation & Activation"
+                            data-price="ZMW 250">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- JavaScript for Enrollment -->
+    <script>
+        const messageDiv = document.getElementById('enrollmentMessage');
+
+        async function enroll(courseId, courseTitle, price) {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                alert('You must be logged in to enroll.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            messageDiv.innerHTML = '<p style="color:blue;">Processing enrollment...</p>';
+
+            try {
+                const response = await fetch('http://localhost:5000/api/enrollments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ courseId, courseTitle, price })
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    messageDiv.innerHTML = '<p style="color:green;">Enrollment successful! Redirecting to dashboard...</p>';
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                } else {
+                    messageDiv.innerHTML = `<p style="color:red;">Enrollment failed: ${data.message}</p>`;
+                }
+            } catch (error) {
+                messageDiv.innerHTML = '<p style="color:red;">Network error. Please try again.</p>';
+            }
+        }
+
+        // Attach click handlers to all enroll buttons
+        document.querySelectorAll('.enroll-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const courseId = btn.dataset.courseId;
+                const courseTitle = btn.dataset.courseTitle;
+                const price = btn.dataset.price;
+                enroll(courseId, courseTitle, price);
+            });
+        });
+    </script>
+</body>
+</html>

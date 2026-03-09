@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MARTOO TECH WORKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .admin-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .admin-section h2 {
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .status-pending { background: #fef3c7; color: #92400e; }
+        .status-approved { background: #d1fae5; color: #065f46; }
+        .status-suspended { background: #fee2e2; color: #991b1b; }
+        .btn-approve {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+        .btn-approve:hover { background: #059669; }
+        .btn-suspend {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+        .btn-suspend:hover { background: #dc2626; }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="MARTOO TECH WORKS" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="auth-nav-item"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard Content -->
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <button id="logoutBtn" class="btn-secondary btn">Logout</button>
+        </div>
+
+        <!-- Users Section -->
+        <div class="admin-section">
+            <h2>User Management</h2>
+            <div id="usersTableContainer">
+                <p>Loading users...</p>
+            </div>
+        </div>
+
+        <!-- Enrollments Section -->
+        <div class="admin-section">
+            <h2>Enrollment Management</h2>
+            <div id="enrollmentsTableContainer">
+                <p>Loading enrollments...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="MARTOO TECH WORKS" class="footer-logo">
+                    <p>Your trusted partner for technical education and services in Zambia.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61568599103956" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/@martootechworks?si=VM7kC3lffHBg2sP7" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/martootechmartin?igsh=MTZuejdmdDc4bnk1ag==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admin-login.html" style="color: #f59e0b;"><i class="fas fa-lock"></i> Admin (staff only)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0973495316</p>
+                    <p class="contact-info"><i class="fas fa-phone-alt"></i> 0774766077</p>
+                    <p class="contact-info"><i class="fas fa-envelope"></i> martootechworks@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MARTOO TECH WORKS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Auth button (user login/logout)
+        function updateAuthButton() {
+            const authItem = document.getElementById('auth-nav-item');
+            const token = localStorage.getItem('token');
+            if (token) {
+                authItem.innerHTML = '<a href="#" id="logout-link" class="btn-login"><i class="fas fa-sign-out-alt"></i> Logout</a>';
+                document.getElementById('logout-link').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    window.location.href = 'index.html';
+                });
+            } else {
+                authItem.innerHTML = '<a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a>';
+            }
+        }
+        updateAuthButton();
+
+        // Admin check
+        const adminToken = localStorage.getItem('adminToken');
+        if (!adminToken) {
+            window.location.href = 'admin-login.html';
+        }
+
+        // Logout button (admin)
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('adminToken');
+            localStorage.removeItem('adminUser');
+            window.location.href = 'admin-login.html';
+        });
+
+        // Fetch users
+        async function fetchUsers() {
+            const container = document.getElementById('usersTableContainer');
+            try {
+                const response = await fetch('http://localhost:5000/api/admin/users', {
+                    headers: { 'Authorization': `Bearer ${adminToken}` }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    if (data.users.length === 0) {
+                        container.innerHTML = '<p>No users found.</p>';
+                    } else {
+                        let html = '<table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Status</th><th>Role</th><th>Actions</th></tr></thead><tbody>';
+                        data.users.forEach(user => {
+                            const statusClass = user.enrollmentStatus === 'approved' ? 'status-approved' : (user.enrollmentStatus === 'suspended' ? 'status-suspended' : 'status-pending');
+                            html += `
+                                <tr>
+                                    <td>${user.name}</td>
+                                    <td>${user.email}</td>
+                                    <td>${user.phone || '-'}</td>
+                                    <td><span class="status-badge ${statusClass}">${user.enrollmentStatus}</span></td>
+                                    <td>${user.role}</td>
+                                    <td>
+                                        ${user.role !== 'admin' ? `
+                                            <button class="btn-approve" onclick="updateUserStatus('${user.uid}', 'approved')">Approve</button>
+                                            <button class="btn-suspend" onclick="updateUserStatus('${user.uid}', 'suspended')">Suspend</button>
+                                        ` : 'N/A'}
+                                    </td>
+                                </tr>
+                            `;
+                        });
+                        html += '</tbody></table>';
+                        container.innerHTML = html;
+                    }
+                } else {
+                    container.innerHTML = '<p style="color:red;">Failed to load users.</p>';
+                }
+            } catch (error) {
+                container.innerHTML = '<p style="color:red;">Network error loading users.</p>';
+            }
+        }
+
+        // Fetch enrollments
+        async function fetchEnrollments() {
+            const container = document.getElementById('enrollmentsTableContainer');
+            try {
+                const response = await fetch('http://localhost:5000/api/admin/enrollments', {
+                    headers: { 'Authorization': `Bearer ${adminToken}` }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    if (data.enrollments.length === 0) {
+                        container.innerHTML = '<p>No enrollments found.</p>';
+                    } else {
+                        let html = '<table><thead><tr><th>Course</th><th>User ID</th><th>Price</th><th>Payment Status</th><th>Enrolled Date</th><th>Actions</th></tr></thead><tbody>';
+                        data.enrollments.forEach(enr => {
+                            const statusClass = enr.paymentStatus === 'approved' ? 'status-approved' : 'status-pending';
+                            html += `
+                                <tr>
+                                    <td>${enr.courseTitle}</td>
+                                    <td>${enr.userId}</td>
+                                    <td>${enr.price}</td>
+                                    <td><span class="status-badge ${statusClass}">${enr.paymentStatus}</span></td>
+                                    <td>${new Date(enr.enrollmentDate).toLocaleDateString()}</td>
+                                    <td>
+                                        ${enr.paymentStatus === 'pending' ? `<button class="btn-approve" onclick="approveEnrollment('${enr.id}')">Approve Payment</button>` : ''}
+                                    </td>
+                                </tr>
+                            `;
+                        });
+                        html += '</tbody></table>';
+                        container.innerHTML = html;
+                    }
+                } else {
+                    container.innerHTML = '<p style="color:red;">Failed to load enrollments.</p>';
+                }
+            } catch (error) {
+                container.innerHTML = '<p style="color:red;">Network error loading enrollments.</p>';
+            }
+        }
+
+        // Update user status (approve/suspend)
+        window.updateUserStatus = async (uid, status) => {
+            if (!confirm(`Change user status to ${status}?`)) return;
+            try {
+                const response = await fetch(`http://localhost:5000/api/admin/users/${uid}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${adminToken}`
+                    },
+                    body: JSON.stringify({ enrollmentStatus: status })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    fetchUsers(); // Refresh table
+                } else {
+                    alert('Error updating user: ' + data.message);
+                }
+            } catch (error) {
+                alert('Network error');
+            }
+        };
+
+        // Approve enrollment (payment)
+        window.approveEnrollment = async (enrollmentId) => {
+            if (!confirm('Approve this enrollment payment?')) return;
+            try {
+                const response = await fetch(`http://localhost:5000/api/admin/enrollments/${enrollmentId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${adminToken}`
+                    },
+                    body: JSON.stringify({ paymentStatus: 'approved' })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    fetchEnrollments(); // Refresh table
+                } else {
+                    alert('Error approving enrollment: ' + data.message);
+                }
+            } catch (error) {
+                alert('Network error');
+            }
+        };
+
+        // Load data on page load
+        fetchUsers();
+        fetchEnrollments();
+    </script>
+</body>
+</html>
